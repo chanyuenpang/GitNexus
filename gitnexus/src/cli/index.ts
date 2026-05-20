@@ -74,6 +74,7 @@ program
   .option('--extensions <list>', 'Comma-separated file extensions to include (e.g. .cs,.ts)')
   .option('--repo-alias <name>', 'Override indexed repository name with a stable alias')
   .option('--scope-manifest <path>', 'Manifest file with scope rules (supports comments and * wildcard)')
+  .option('--no-ai-context', 'Skip writing AGENTS.md/CLAUDE.md and installing repo-local GitNexus skills')
   .option('--scope-prefix <pathPrefix>', 'Add a scope path prefix rule (repeatable)', collectValues, [])
   .action(analyzeCommand);
 
