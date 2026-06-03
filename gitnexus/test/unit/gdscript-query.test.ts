@@ -1,13 +1,16 @@
 import { describe, expect, it } from 'vitest';
 import Parser from 'tree-sitter';
 import { createRequire } from 'node:module';
+import { SupportedLanguages } from '../../src/config/supported-languages.js';
 import { GDSCRIPT_QUERIES } from '../../src/core/ingestion/tree-sitter-queries.js';
+import { isLanguageAvailable } from '../../src/core/tree-sitter/parser-loader.js';
 
 const require = createRequire(import.meta.url);
-const GDScript = require('tree-sitter-gdscript');
+const itIfGDScriptAvailable = isLanguageAvailable(SupportedLanguages.GDScript) ? it : it.skip;
 
 describe('GDSCRIPT_QUERIES', () => {
-  it('can compile against tree-sitter-gdscript and capture core symbols', () => {
+  itIfGDScriptAvailable('can compile against tree-sitter-gdscript and capture core symbols', () => {
+    const GDScript = require('tree-sitter-gdscript');
     const parser = new Parser();
     parser.setLanguage(GDScript);
 
