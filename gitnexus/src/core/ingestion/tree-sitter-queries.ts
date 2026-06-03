@@ -676,18 +676,18 @@ export const GDSCRIPT_QUERIES = `
 ; Generic call expressions must NOT be tagged @import to avoid double-classifying
 ; call sites as imports (which corrupts import resolution and call routing).
 (call
-  function: (identifier) @_preload
+  (identifier) @_preload
   arguments: (arguments (string) @import.source)) @import
 (#eq? @_preload "preload")
 
 (call
-  function: (identifier) @_load
+  (identifier) @_load
   arguments: (arguments (string) @import.source)) @import
 (#eq? @_load "load")
 
 ; ── Function Calls ──────────────────────────────────────────────────────────
 (call
-  function: (identifier) @call.name) @call
+  (identifier) @call.name) @call
 
 `;
 
