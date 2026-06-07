@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "gitnexus",
+  "displayName": "gitnexus",
+  "aliases": [],
+  "description": "",
+  "createdAt": "2026-06-05T12:54:11.641Z",
+  "updatedAt": "2026-06-05T12:54:11.641Z",
+  "settings": {
+    "id": "gitnexus",
+    "rootPath": "/home/yankeeting/.openclaw/projects/gitnexus",
+    "gitnexus": {
+      "repoId": "gitnexus",
+      "indexed": false
+    },
+    "memoryStore": {
+      "path": "/home/yankeeting/.openclaw/.projects/gitnexus/memory.sqlite"
+    },
+    "lastActiveTask": "default",
+    "registeredAt": "2026-04-08T17:31:57.178Z",
+    "updatedAt": "2026-05-20T04:13:26.408Z",
+    "sessionLastTasks": {}
+  },
+  "gitnexus": {
+    "repoId": "gitnexus",
+    "indexed": false
+  },
+  "memory": {
+    "driver": "sqlite",
+    "path": ".claw/memory.sqlite"
+  },
+  "state": {}
+}
