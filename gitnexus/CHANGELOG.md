@@ -2,6 +2,22 @@
 
 All notable changes to GitNexus will be documented in this file.
 
+## [1.5.9] - 2026-06-08
+
+> Stable release notes comparing `v1.5.8` → `v1.5.9`.
+
+### Added
+- Analyze `ai-context` option (on/off) is now persisted to `meta.json.analyzeOptions` and automatically reused on subsequent runs. Re-enable with `--ai-context` or reset all stored options with `--no-reuse-options`.
+- `gitnexus clean` now preserves `meta.json` by default, keeping stored analyze options and repository metadata across clean-rebuild cycles.
+
+### Fixed
+- Restored GDScript (Godot 4.x) query compatibility when the GDScript tree-sitter grammar is available but optional. Previously, certain code paths treated the grammar as always-present, causing query failures on repos indexed with GDScript sources.
+- Added regression test to guard optional GDScript query behavior against future breakage.
+
+### Changed
+- Retired Rule Lab skill references from installed skill metadata and agent-facing docs.
+- Calibrated truth-source line references in Unity runtime process documentation.
+
 ## [1.5.8] - 2026-05-18
 
 > Stable release notes comparing `v1.5.7` → `v1.5.8`.
